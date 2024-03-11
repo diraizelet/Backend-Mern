@@ -7,13 +7,13 @@ const router = express.Router();
 
 
 
-router.get('/', );
+router.get('/', UsersController.getUsers);
 
 
 
-router.post('/signup', );
+router.post('/signup', UsersController.signup);
 
-router.post('/login', );
+router.post('/login', UsersController.login);
 
 
 module.exports = router;
