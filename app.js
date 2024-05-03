@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser =require('body-parser');
 
 const HttpError = require('./models/http-error');
@@ -26,4 +27,12 @@ app.use((error, req, res, next) => {
     res.json({message: error.message ||'An unknown error occurred'});
 });
 
+
+mongoose.connect('mongodb+srv://raidi:Kakarot1@cluster0.gv6e8kk.mongodb.net/places?retryWrites=true&w=majority&appName=Cluster0')
+.then(() =>
+{
 app.listen(5000);
+console.log('db is connected');
+}).catch(err => {
+    console.log(err);
+});
