@@ -28,7 +28,7 @@ app.use((error, req, res, next) => {
 });
 
 
-mongoose.connect('mongodb+srv://raidi:Kakarot1@cluster0.gv6e8kk.mongodb.net/places?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://urlink')
 .then(() =>
 {
 app.listen(5000);
